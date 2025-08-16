@@ -1,13 +1,17 @@
 import {
   Card,
-  CardAction,
-  CardContent,
-  CardDescription,
-  CardHeader,
+  CardFooter,
   CardTitle,
+  CardDescription,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { LucideIcon, TrendingUp, TrendingDown } from "lucide-react";
+import {
+  LucideIcon,
+  TrendingUp,
+  // TrendingDown,
+  Percent,
+  Plus,
+} from "lucide-react";
 function DashboardCard({
   card,
 }: {
@@ -20,7 +24,7 @@ function DashboardCard({
 }) {
   const amount = card.amount.toLocaleString();
   return (
-    <Card className="p-2">
+    <Card className="p-2 gap-1">
       <div className="flex gap-0.5">
         <Badge
           variant="outline"
@@ -30,10 +34,29 @@ function DashboardCard({
         </Badge>
         <CardTitle className="text-sm ml-1">{card.title}</CardTitle>
       </div>
-      <CardTitle className="text-2xl font-semibold">
+      <CardTitle className="text-3xl font-semibold m-0 p-0">
         {card.title === "Total Revenu" ? "$" : ""}
         {amount}
       </CardTitle>
+      <CardFooter className="pt-0 text-[12px] px-0">
+        <Badge
+          variant="outline"
+          className="h-5 min-w-5 rounded-full px-1 font-mono tabular-nums"
+        >
+          {card.title === "Total Product" ? (
+            <>
+              <Plus /> {card.percent}
+            </>
+          ) : (
+            <>
+              <TrendingUp /> {card.percent} <Percent />
+            </>
+          )}
+        </Badge>
+        <CardDescription>
+          {card.title === "Total Product" ? "Products" : ""} This Month
+        </CardDescription>
+      </CardFooter>
     </Card>
   );
 }

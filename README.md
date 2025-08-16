@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Drip On Drip Dashboard
+
+This is the official dashboard for the Drip On Drip e-commerce platform. It provides administrative and analytical tools to manage the online store.
+
+## Features
+
+- **Dashboard Overview:** A central hub to view key metrics and recent activities.
+- **Analytics:** Detailed insights into sales, traffic, and customer behavior.
+- **Customer Management:** View and manage customer information.
+- **Order Tracking:** Track and manage all orders from the e-commerce site.
+- **Product Management:** Add, edit, and remove products from the store.
+- **Settings:** Configure dashboard and application settings.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for building server-side rendered and static web applications.
+- [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid UI development.
+- [Shadcn/ui](https://ui.shadcn.com/) - A collection of re-usable UI components.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
+
+- Node.js (v18.x or later)
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/Lil-Code30/dripOndrip-dashboard
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. Run the development server
+   ```sh
+   npm run dev
+   ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Related Projects
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Drip On Drip E-commerce Site:** [https://drip-on-drip-v1.vercel.app/shop](https://drip-on-drip-v1.vercel.app/shop)
+- **E-commerce GitHub Repository:** [https://github.com/Lil-Code30/drip-on-drip_e-com](https://github.com/Lil-Code30/drip-on-drip_e-com)

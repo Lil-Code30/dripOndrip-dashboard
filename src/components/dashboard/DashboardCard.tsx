@@ -35,7 +35,7 @@ function DashboardCard({
         <CardTitle className="text-sm ml-1">{card.title}</CardTitle>
       </div>
       <CardTitle className="text-3xl font-semibold m-0 p-0">
-        {card.title === "Total Revenu" ? "$" : ""}
+        {card.title === "Total Sales" ? "$" : ""}
         {amount}
       </CardTitle>
       <CardFooter className="pt-0 text-[12px] px-0">

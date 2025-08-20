@@ -11,6 +11,7 @@ import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import Navbar from "@/components/dashboard/Navbar";
 import DashboardOrdersTable from "@/components/dashboard/DashboardOrdersTable";
+import RevenueVsSalesChart from "@/components/dashboard/charts/RevenuVsSales.chart";
 import { Card, CardFooter, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +23,7 @@ function Dashboard() {
   const cardItems = [
     {
       icon: CircleDollarSign,
-      title: "Total Revenu",
+      title: "Total Sales",
       amount: 10000,
       percent: 23,
     },
@@ -105,6 +106,9 @@ function Dashboard() {
             {cardItems.map((card) => (
               <DashboardCard key={card.title} card={card} />
             ))}
+          </div>
+          <div>
+            <RevenueVsSalesChart />
           </div>
           <DashboardOrdersTable />
         </div>

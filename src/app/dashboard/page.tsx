@@ -9,7 +9,6 @@ import {
 import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import DashboardCard from "@/components/dashboard/DashboardCard";
-import Navbar from "@/components/dashboard/Navbar";
 import DashboardOrdersTable from "@/components/dashboard/DashboardOrdersTable";
 import RevenueVsSalesChart from "@/components/dashboard/charts/RevenuVsSales.chart";
 import { Card, CardFooter, CardTitle } from "@/components/ui/card";
@@ -97,8 +96,6 @@ function Dashboard() {
 
   return (
     <>
-      <Navbar />
-      <DropdownMenuSeparator />
       <section className="w-full flex gap-2 px-2 py-1">
         <div className="p-3 w-[70%]">
           <DashboardHeader />

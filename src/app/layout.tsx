@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/layouts/AppSidebar";
 import "./globals.css";
+import Navbar from "@/components/dashboard/Navbar";
+import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,11 @@ export default function RootLayout({
       >
         <SidebarProvider>
           <AppSidebar />
-          <main className="p-2.5 w-full">{children}</main>
+          <main className="p-2.5 w-full">
+            <Navbar />
+            <DropdownMenuSeparator />
+            {children}
+          </main>
         </SidebarProvider>
       </body>
     </html>

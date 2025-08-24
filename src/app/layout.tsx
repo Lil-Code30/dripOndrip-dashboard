@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/layouts/AppSidebar";
 import "./globals.css";
-import Navbar from "@/components/dashboard/Navbar";
+import Navbar from "@/components/layouts/Navbar";
 import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 
 const geistSans = Geist({

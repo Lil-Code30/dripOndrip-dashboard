@@ -6,7 +6,6 @@ import {
   Users,
   Eye,
 } from "lucide-react";
-import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import DashboardOrdersTable from "@/components/dashboard/DashboardOrdersTable";

@@ -26,7 +26,7 @@ export function OrdersChart({
   console.log(chartData);
 
   return (
-    <ChartContainer config={chartConfig} className="min-h-auto w-full">
+    <ChartContainer config={chartConfig} className="min-h-[50px] w-full">
       <LineChart
         accessibilityLayer
         data={chartData}

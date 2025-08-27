@@ -5,7 +5,7 @@ import OrderCard from "@/components/dashboard/orders/OrderCard";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { DataTable } from "@/components/ui/data-table";
 import { columns } from "@/components/dashboard/orders/OrderTable/Columns";
-
+import PaginationDemo from "@/components/common/PaginationDemo";
 function Orders() {
   const orderDashboardData = [
     {
@@ -185,6 +185,7 @@ function Orders() {
           <CardContent>
             <DataTable columns={columns} data={orders} />
           </CardContent>
+          <PaginationDemo />
         </Card>
       </section>
     </>

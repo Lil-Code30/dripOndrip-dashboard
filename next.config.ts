@@ -10,6 +10,10 @@ const nextConfig: NextConfig = {
         pathname: "/seed/**",
         search: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

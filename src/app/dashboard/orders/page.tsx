@@ -134,7 +134,8 @@ function Orders() {
       date: "07 Mar 2025",
     },
   ];
-
+  // TODO :
+  // [] Make the the contain of the order to appear on the side on the screen when the view button is clicked
   return (
     <>
       <div className="flex items-center justify-between my-3">

@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-type Customer = {
+export type Customer = {
   customerId: string;
   name: string;
   email: string;

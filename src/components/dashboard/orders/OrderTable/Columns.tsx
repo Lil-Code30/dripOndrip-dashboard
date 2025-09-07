@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-type Order = {
+export type Order = {
   orderId: string;
   customer: string;
   status: "Completed" | "Pending" | "Cancelled";

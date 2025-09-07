@@ -5,6 +5,7 @@ import OrderCard from "@/components/dashboard/orders/OrderCard";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { DataTable } from "@/components/ui/data-table";
 import { columns } from "@/components/dashboard/orders/OrderTable/Columns";
+import type { Order } from "@/components/dashboard/orders/OrderTable/Columns";
 import PaginationDemo from "@/components/common/PaginationDemo";
 function Orders() {
   const orderDashboardData = [
@@ -69,67 +70,67 @@ function Orders() {
       ],
     },
   ];
-  const orders = [
+  const orders: Order[] = [
     {
       orderId: "5678",
       customer: "Jerome Bell",
-      status: "Completed",
+      status: "Completed" as const,
       totalAmount: 320.0,
       date: "01 Mar 2025",
     },
     {
       orderId: "5679",
       customer: "Bessie Cooper",
-      status: "Completed",
+      status: "Completed" as const,
       totalAmount: 440.0,
       date: "01 Mar 2025",
     },
     {
       orderId: "5680",
       customer: "Darrell Steward",
-      status: "Cancelled",
+      status: "Cancelled" as const,
       totalAmount: 220.0,
       date: "02 Mar 2025",
     },
     {
       orderId: "5681",
       customer: "Cameron Williamson",
-      status: "Pending",
+      status: "Pending" as const,
       totalAmount: 510.0,
       date: "03 Mar 2025",
     },
     {
       orderId: "5682",
       customer: "Floyd Miles",
-      status: "Cancelled",
+      status: "Cancelled" as const,
       totalAmount: 600.0,
       date: "04 Mar 2025",
     },
     {
       orderId: "5683",
       customer: "Esther Howard",
-      status: "Pending",
+      status: "Pending" as const,
       totalAmount: 360.0,
       date: "05 Mar 2025",
     },
     {
       orderId: "5684",
       customer: "Leslie Alexander",
-      status: "Pending",
+      status: "Pending" as const,
       totalAmount: 420.0,
       date: "05 Mar 2025",
     },
     {
       orderId: "5685",
       customer: "Arlene McCoy",
-      status: "Completed",
+      status: "Completed" as const,
       totalAmount: 115.0,
       date: "06 Mar 2025",
     },
     {
       orderId: "5686",
       customer: "Darlene Robertson",
-      status: "Completed",
+      status: "Completed" as const,
       totalAmount: 720.0,
       date: "07 Mar 2025",
     },
@@ -184,7 +185,7 @@ function Orders() {
             <div></div>
           </CardHeader>
           <CardContent>
-            <DataTable columns={columns} data={orders} />
+            <DataTable<Order, unknown> columns={columns} data={orders} />
           </CardContent>
           <PaginationDemo />
         </Card>

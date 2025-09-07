@@ -3,6 +3,7 @@ import CustomerStatsCard from "@/components/dashboard/customers/CustomerStatsCar
 import CustomerWeeklyGrowthChart from "@/components/dashboard/customers/charts/WeeklyCustomerGrowthChart";
 import { DataTable } from "@/components/ui/data-table";
 import { columns } from "@/components/dashboard/customers/CustomerTable/Columns";
+import type { Customer } from "@/components/dashboard/customers/CustomerTable/Columns";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -54,7 +55,7 @@ function Customers() {
       totalOrders: 12,
       totalSpend: 1240.5, // example total spend
       lastOrder: "2024-12-08",
-      status: "Active",
+      status: "Active" as const,
     },
     {
       customerId: "CUST104",
@@ -64,7 +65,7 @@ function Customers() {
       totalOrders: 5,
       totalSpend: 460.75,
       lastOrder: "2024-12-01",
-      status: "Inactive",
+      status: "Inactive" as const,
     },
     {
       customerId: "CUST103",
@@ -74,7 +75,7 @@ function Customers() {
       totalOrders: 15,
       totalSpend: 1895.2,
       lastOrder: "2024-12-06",
-      status: "Active",
+      status: "Active" as const,
     },
     {
       customerId: "CUST102",
@@ -84,7 +85,7 @@ function Customers() {
       totalOrders: 9,
       totalSpend: 875.0,
       lastOrder: "2024-12-02",
-      status: "Active",
+      status: "Active" as const,
     },
     {
       customerId: "CUST101",
@@ -94,7 +95,7 @@ function Customers() {
       totalOrders: 7,
       totalSpend: 655.4,
       lastOrder: "2024-11-30",
-      status: "Inactive",
+      status: "Inactive" as const,
     },
   ];
 
@@ -182,7 +183,7 @@ function Customers() {
           </div>
         </CardHeader>
         <Card>
-          <DataTable columns={columns} data={customerList} />
+          <DataTable<Customer, unknown> columns={columns} data={customerList} />
           <PaginationDemo />
         </Card>
       </section>
